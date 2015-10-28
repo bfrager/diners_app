@@ -2,7 +2,7 @@
 <% @restaurants.each do |r| %>
 <div class="diner">
 
-<h2>Restaurant Name: <%= r.name %></h2></div>
+<h2>Restaurant Name: <%= link_to r.name, restaurant_path(r)%></h2></div>
 <%# link_to r.name, edit_%>
 
 <% end %>
