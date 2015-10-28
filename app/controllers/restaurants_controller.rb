@@ -12,6 +12,12 @@ class RestaurantsController < ApplicationController
   end
 
   def destroy
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.destroy
+      redirect_to '/'
+    else
+      render 'show'
+    end
   end
 
   def create
